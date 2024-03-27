@@ -1,5 +1,25 @@
 {
   "dependencies": {
-    "socket.io": "^4.7.5"
-  }
+    "ejs": "^3.1.9",
+    "express": "^4.19.2",
+    "socket.io": "^4.7.5",
+    "uuid": "^9.0.1"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "nodejs",
+  "description": "Initialize our NodeJS Project - DONE Initialize our first view - DONE Create a room id - DONE Add the ability to view our own video Add styling Add mute button Add Stop video button",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/navzbikesh/Nodejs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/navzbikesh/Nodejs/issues"
+  },
+  "homepage": "https://github.com/navzbikesh/Nodejs#readme"
 }

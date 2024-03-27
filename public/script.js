@@ -14,8 +14,15 @@ navigator.mediaDevices
     addVideoStream(myVideo, stream);
   });
 
-socket.emit("join-room");
+socket.emit("join-room", ROOM_ID);
 
+socket.on("user-connected", () => {
+  connectToNewUser();
+});
+
+const connectToNewUser = () => {
+  console.log("user connected");
+};
 const addVideoStream = (video, stream) => {
   video.srcObject = stream;
   video.addEventListener("loadedmetadata", () => {
