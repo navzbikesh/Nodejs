@@ -20,7 +20,7 @@ navigator.mediaDevices
 
     peer.on("call", (call) => {
       call.answer(stream); // Answer the call with an A/V stream.
-      call.on("stream", (remoteStream) => {
+      call.on("stream", (userVideostream) => {
         // Show stream in some video/canvas element.
         addVideoStream(video, userVideostream);
       });
@@ -34,7 +34,6 @@ navigator.mediaDevices
 peer.on("open", (id) => {
   socket.emit("join-room", ROOM_ID, id);
 });
-socket.emit("join-room", ROOM_ID);
 
 const connectToNewUser = (user, stream) => {
   console.log("user connected");
